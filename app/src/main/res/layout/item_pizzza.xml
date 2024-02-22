@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/pizza_image"
+        android:layout_width="152dp"
+        android:layout_height="136dp"
+        android:contentDescription="@string/image_of_pizza"
+        tools:srcCompat="@drawable/naruto" />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/pizza_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:paddingTop="8dp"
+        android:layout_marginStart="16dp"
+        android:textStyle="bold"
+        tools:text="Наруто Пицца" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pizza_description"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:textSize="12sp"
+        tools:text="Ананас, курица терияки, соус, моцарелла, сладкий перец"
+        android:textColor="@color/grey"/>
+
+        <TextView
+            android:id="@+id/pizza_cost"
+            android:layout_width="76dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/background_cost"
+            android:padding="4dp"
+            android:textAllCaps="true"
+            android:textColor="@color/text_orange"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            tools:text="  от 3900 ₸" />
+
+    </LinearLayout>
+</LinearLayout>

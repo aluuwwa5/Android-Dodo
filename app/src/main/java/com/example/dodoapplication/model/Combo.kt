@@ -1,8 +1,7 @@
 package com.example.dodoapplication.model
 import java.io.Serializable
 import java.util.UUID
-
-data class Pizzza(
+data class Combo(
     override val id: String = UUID.randomUUID().toString(),
     override val title: String,
     override val description: String,

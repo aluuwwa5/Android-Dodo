@@ -51,7 +51,8 @@
             android:textColor="@color/text_orange"
             android:textSize="12sp"
             android:textStyle="bold"
-            tools:text="  от 3900 ₸" />
+            android:textAlignment="center"
+            tools:text="3900 ₸" />
 
     </LinearLayout>
 </LinearLayout>

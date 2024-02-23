@@ -8,14 +8,13 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.dodoapplication.adapter.PizzaAdapter
 import com.example.dodoapplication.databinding.ActivityMainBinding
+import com.example.dodoapplication.model.Pizza
 import com.example.dodoapplication.model.PizzaDataSource
-import com.example.dodoapplication.model.PizzaDataSource.pizzaList
-import com.example.dodoapplication.model.Pizzza
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-
-    private var adapter: PizzaAdapter? = null
+    private var pizzaList: List<Pizza> = PizzaDataSource.pizzaList
+    private lateinit var adapter: PizzaAdapter
     private lateinit var searchButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,22 +23,18 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         searchButton = binding.Button
         handleSearch()
-
-    PizzaAdapter(
-    onPizzaClick = {
-        handlePizzaClick(it)
-    }
-    )
-
     adapter = PizzaAdapter(
     onPizzaClick = {
-        handlePizzaClick(it)}
+        handlePizzaClick(it)
+    },
+        onComboClick = {
+            handleComboClick(it)
+    }
     )
 
     binding.recyclerView.adapter = adapter
 
-
-    adapter?.setData(PizzaDataSource.pizzaList)
+    adapter.setData(pizzaList)
 }
     private fun handleSearch() {
         binding.Button.setOnClickListener {
@@ -64,9 +59,17 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-private fun handlePizzaClick(pizza: Pizzza) {
+private fun handlePizzaClick(pizza: Pizza) {
     val intent = Intent(this, SecondActivity::class.java)
     intent.putExtra("Pizzza", pizza);
     startActivity(intent)
-}}
+}
+private fun handleComboClick(pizza:Pizza){
+    val intent = Intent(this, SecondActivity::class.java)
+    intent.putExtra("Combo", pizza)
+    startActivity(intent)
+            }
+    }
+
+
 

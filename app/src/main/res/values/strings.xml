@@ -3,4 +3,5 @@
     <string name="image_of_pizza">image of pizza</string>
     <string name="search_hint">Поиск по пиццам</string>
     <string name ="no_match">К сожалению, такой пиццы не нашлось</string>
+    <string name="combo_photo">Combo Photo</string>
 </resources>

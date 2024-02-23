@@ -20,7 +20,7 @@ class PizzaAdapter(private val onPizzaClick: (Pizza) -> Unit,
 
     fun setData(pizza: List<Pizza>) {
         pizzaList.clear()
-        pizzaList.addAll(ArrayList(pizza))
+//        pizzaList.addAll(ArrayList(pizza))
         notifyDataSetChanged()}
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {

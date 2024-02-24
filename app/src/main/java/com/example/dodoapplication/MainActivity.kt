@@ -61,12 +61,12 @@ class MainActivity : AppCompatActivity() {
 
 private fun handlePizzaClick(pizza: Pizza) {
     val intent = Intent(this, SecondActivity::class.java)
-    intent.putExtra("Pizzza", pizza);
+    intent.putExtra("pizza", pizza);
     startActivity(intent)
 }
 private fun handleComboClick(pizza:Pizza){
     val intent = Intent(this, SecondActivity::class.java)
-    intent.putExtra("Combo", pizza)
+    intent.putExtra("pizza", pizza)
     startActivity(intent)
             }
     }

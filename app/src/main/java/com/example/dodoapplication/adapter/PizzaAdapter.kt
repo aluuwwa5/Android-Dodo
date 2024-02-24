@@ -11,7 +11,7 @@ import com.example.dodoapplication.model.Pizzza
 class PizzaAdapter(private val onPizzaClick: (Pizza) -> Unit,
                    private val onComboClick: (Pizza) -> Unit):
     RecyclerView.Adapter<RecyclerView.ViewHolder>(){
-    private val pizzaList: ArrayList<out Pizza> = ArrayList()
+    private val pizzaList: ArrayList<Pizza> = ArrayList()
 
     companion object {
         private const val VIEW_TYPE_PIZZA = 0
@@ -20,7 +20,7 @@ class PizzaAdapter(private val onPizzaClick: (Pizza) -> Unit,
 
     fun setData(pizza: List<Pizza>) {
         pizzaList.clear()
-//        pizzaList.addAll(ArrayList(pizza))
+        pizzaList.addAll(pizza)
         notifyDataSetChanged()}
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
